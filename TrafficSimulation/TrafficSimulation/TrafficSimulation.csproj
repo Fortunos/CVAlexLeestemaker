@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{013EF073-4635-4ECC-8176-B1480F66AEEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrafficSimulation</RootNamespace>
+    <AssemblyName>TrafficSimulation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E4DBEDD650AD0A77B9F469B1E8E355694C66B452</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TrafficSimulation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitmapControl.cs" />
+    <Compile Include="BovenSchermRechts.xaml.cs">
+      <DependentUpon>BovenSchermRechts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BovenSchermLinks.xaml.cs">
+      <DependentUpon>BovenSchermLinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EfficientieWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EfficientieWindow.Designer.cs">
+      <DependentUpon>EfficientieWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimulationMap.cs" />
+    <Compile Include="Tiles\Crossroad.cs" />
+    <Compile Include="Tiles\DrawTile.cs" />
+    <Compile Include="Tiles\Fork.cs" />
+    <Compile Include="Tiles\removeTile.cs" />
+    <Compile Include="Tiles\Road.cs" />
+    <Compile Include="Tiles\SelectTile.cs" />
+    <Compile Include="Tiles\Spawner.cs" />
+    <Compile Include="Tiles\Tile.cs" />
+    <Compile Include="WindowSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowSelect.Designer.cs">
+      <DependentUpon>WindowSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceAbout.xaml.cs">
+      <DependentUpon>InterfaceAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation.cs" />
+    <Compile Include="ExtraButtonsOS.xaml.cs">
+      <DependentUpon>ExtraButtonsOS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoBalk.xaml.cs">
+      <DependentUpon>InfoBalk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceStart.xaml.cs">
+      <DependentUpon>InterfaceStart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LaneTrafficlight.cs" />
+    <Compile Include="LoadWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loadwindow.Designer.cs">
+      <DependentUpon>LoadWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnderScherm.xaml.cs">
+      <DependentUpon>OnderScherm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartWindow.Designer.cs">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trafficlight.cs" />
+    <Compile Include="TrafficlightControl.cs" />
+    <Compile Include="SimControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimControl.Designer.cs">
+      <DependentUpon>SimControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimWindow.Designer.cs">
+      <DependentUpon>SimWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
+    <EmbeddedResource Include="EfficientieWindow.resx">
+      <DependentUpon>EfficientieWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimControl.resx">
+      <DependentUpon>SimControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimWindow.resx">
+      <DependentUpon>SimWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowSelect.resx">
+      <DependentUpon>WindowSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\Projectdocument.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="TrafficSimulation_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TrafficExpertLogo.png" />
+    <Content Include="Resources\Buttons\Day_Button.png" />
+    <Resource Include="Resources\Buttons\Help_Button.png" />
+    <Resource Include="Resources\Buttons\Info_Button.png" />
+    <Content Include="Resources\Buttons\Night_Button.png" />
+    <Resource Include="Resources\Buttons\Pause_Button.png" />
+    <Resource Include="Resources\Buttons\Play_Button.png" />
+    <Resource Include="Resources\Buttons\Save_Button.png" />
+    <Resource Include="Resources\Buttons\Select_Button.png" />
+    <Resource Include="Resources\Buttons\SpeedDown_Button.png" />
+    <Resource Include="Resources\Buttons\SpeedUp_Button.png" />
+    <Resource Include="Resources\Buttons\Stop_Button.png" />
+    <Resource Include="Resources\Buttons\Home_Button.png" />
+    <Resource Include="Resources\Buttons\Erase_Button.png" />
+    <Resource Include="Resources\Buttons\TurnLeft_Button.png" />
+    <Resource Include="Resources\Buttons\TurnRight_Button.png" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico" />
+    <Resource Include="Resources\stopandgologo.png" />
+    <None Include="Resources\car2.png" />
+    <None Include="Resources\car3.png" />
+    <None Include="Resources\car4.png" />
+    <None Include="Resources\car5.png" />
+    <Content Include="TrafficExpertLogo.png" />
+    <Resource Include="Resources\Roads\bendLD.png" />
+    <Resource Include="Resources\Roads\bendLU.PNG" />
+    <Resource Include="Resources\Roads\bendRD.png" />
+    <Resource Include="Resources\Roads\bendUR.png" />
+    <Content Include="Resources\car1.png" />
+    <Resource Include="Resources\Crossroads\forkdown.PNG" />
+    <Resource Include="Resources\Crossroads\forkleft.png" />
+    <Resource Include="Resources\Crossroads\forkright.png" />
+    <Resource Include="Resources\Crossroads\forkup.png" />
+    <Resource Include="Resources\Crossroads\Crossroadstandaard.PNG" />
+    <Resource Include="Resources\Roads\roadhor.PNG" />
+    <Resource Include="Resources\Roads\roadver.png" />
+    <Resource Include="Resources\Roads\spawnerdown.PNG" />
+    <Resource Include="Resources\Roads\spawnerleft.png" />
+    <Resource Include="Resources\Roads\spawnerright.png" />
+    <Resource Include="Resources\Roads\spawnerup.png" />
+    <Content Include="Resources\truck1.png" />
+    <Content Include="Resources\truck2.png" />
+    <Content Include="Resources\truck3.png" />
+    <Content Include="Resources\truck4.png" />
+    <Content Include="Resources\truck5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BovenSchermRechts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BovenSchermLinks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExtraButtonsOS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoBalk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InterfaceAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InterfaceStart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OnderScherm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="TrafficSimulation.Interface"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500"
+             Opacity="1" Background="Transparent">
+
+    <Grid x:Name="Basic" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Width="Auto" Height="Auto">
+                Vertragen
+            </Button>
+            <Button Width="Auto" Height="Auto">
+              play/pauze
+            </Button>
+            <Button Width="Auto" Height="Auto">
+                <TextBlock Text="versnellen"/>
+            </Button>
+            <Button Width="Auto" Height="Auto">
+                <TextBlock Text="sim/ont"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="Day"/>
+            </Button>
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="Night"/>
+            </Button>
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="help"/>
+            </Button>
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="Info"/>
+            </Button>
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="save"/>
+            </Button>
+            <Button Width="50" Height="50" Margin="5,0,0,0">
+                <TextBlock Text="home"/>
+            </Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1" Width="auto" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Info over huidig geselecteerde tool" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Info over wereld" />
+        </Grid>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+            <Button Height="Auto" Width="Auto" Margin="5,0,0,0">
+                <TextBlock Text="Wegen" />
+            </Button>
+
+            <Button Height="20" Width="Auto" Margin="5,0,0,0">
+                <TextBlock Text="Kruispunten"/>
+            </Button>
+
+            <Button Height="20" Width="Auto" Margin="5,0,0,0">
+                <TextBlock Text="Gum"/>
+            </Button>
+
+            <Button Height="20" Width="Auto" Margin="5,0,0,0">
+                <TextBlock Text="Select"/>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
