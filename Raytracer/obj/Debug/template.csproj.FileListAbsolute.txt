@@ -1,0 +1,14 @@
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\bin\Debug\template.exe.config
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\bin\Debug\template.exe
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\bin\Debug\template.pdb
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\bin\Debug\OpenTK.dll
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\obj\Debug\template.csprojResolveAssemblyReference.cache
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\obj\Debug\template.exe
+E:\GitHub Repos\CVAlexLeestemaker\Raytracer\obj\Debug\template.pdb
+C:\Users\User\Desktop\Projects\Raytracer\bin\Debug\template.exe.config
+C:\Users\User\Desktop\Projects\Raytracer\obj\Debug\template.exe
+C:\Users\User\Desktop\Projects\Raytracer\obj\Debug\template.pdb
+C:\Users\User\Desktop\Projects\Raytracer\bin\Debug\template.exe
+C:\Users\User\Desktop\Projects\Raytracer\bin\Debug\template.pdb
+C:\Users\User\Desktop\Projects\Raytracer\bin\Debug\OpenTK.dll
+C:\Users\User\Desktop\Projects\Raytracer\obj\Debug\template.csprojResolveAssemblyReference.cache
