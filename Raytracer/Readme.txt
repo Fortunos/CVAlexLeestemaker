@@ -1,6 +1,6 @@
 Students:
-Alex Leestenmaker - 5518628
-Jonne Deurlooo - 4120167
+Alex Leestemaker - 5518628
+Jonne Deurloo - 4120167
 Mark Heinsbroek - 5586771
 
 Bonus assignments implemented:
