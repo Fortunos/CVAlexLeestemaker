@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Drawing.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GeneticTSP
 {
-    class Pool
+    internal class Pool
     {
         public List<Route> routes = new List<Route>();
 
-        private float mut = 0.8f;
-        private int poolSize = 100;
-        private int childPoolSize = 1000;
-        private int maxLoops = 50;
+        const float mut = 0.8f;
+        const int poolSize = 100;
+        const int childPoolSize = 1000;
+        const int maxLoops = 50;
 
         public Pool(List<Node> nodes)
         {
@@ -31,15 +27,6 @@ namespace GeneticTSP
             List<Route> children = new List<Route>();
 
             Route[] threadsafe = new Route[childPoolSize];
-
-            //while (children.Count < childPoolSize)
-            //{
-            //    int x = rnd.Next(routes.Count);
-            //    int y = rnd.Next(routes.Count);
-
-            //    Route child = Combine(routes[x], routes[y]);
-            //    children.Add(child);
-            //}
 
             Parallel.For(0, childPoolSize, i =>
             {
@@ -67,39 +54,29 @@ namespace GeneticTSP
         {
             List<Node> stops = new List<Node>();
 
-            int split = StaticRandom.Rand(a.stops.Count);
+            int split = StaticRandom.Rand(a.Stops.Count);
 
             //pure breeding
             for (int i = 0; i < split; i++)
             {
-                stops.Add(a.stops[i]);
+                stops.Add(a.Stops[i]);
             }
 
-            for (int i = 0; i < b.stops.Count; i++)
+            for (int i = 0; i < b.Stops.Count; i++)
             {
-                Node next = b.stops[i];
+                Node next = b.Stops[i];
                 if (!stops.Contains(next))
                 {
                     stops.Add(next);
                 }
             }
 
-            //mutation through swap
-            //if (rnd.NextDouble() < mut)
-            //{
-            //    int x = rnd.Next(a.stops.Count);
-            //    int y = rnd.Next(a.stops.Count);
-
-            //    Node temp = stops[x];
-            //    stops[x] = stops[y];
-            //    stops[y] = temp;
-            //}
             stops = SwapMutate(stops, 0);
 
             return new Route(stops, false);
         }
 
-        private List<Node> SwapMutate(List<Node> stops, int loops)
+        List<Node> SwapMutate(List<Node> stops, int loops)
         {
             if (StaticRandom.RandDouble() < mut && loops < maxLoops)
             {
@@ -115,13 +92,9 @@ namespace GeneticTSP
             return stops;
         }
 
-        private int sortByFitness(Route a, Route b)
+        int sortByFitness(Route a, Route b)
         {
-            if (a.fitness > b.fitness)
-                return 1;
-            if (b.fitness > a.fitness)
-                return -1;
-            return 0;
+            return a.Fitness.CompareTo(b.Fitness);
         }
     }
 }

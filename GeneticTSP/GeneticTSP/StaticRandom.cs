@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace GeneticTSP
 {
     public static class StaticRandom
     {
-        private static Random _global = new Random();
+        static readonly Random _global = new Random();
         static readonly ThreadLocal<Random> random =
             new ThreadLocal<Random>(() => {
                 int seed;

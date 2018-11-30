@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GeneticTSP
+﻿namespace GeneticTSP
 {
-    class Node
+    internal class Node
     {
         //position coördinates
         public double x, y;
